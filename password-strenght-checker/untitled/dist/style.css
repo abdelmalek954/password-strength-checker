@@ -1,0 +1,102 @@
+/* الخطوط الأساسية والخلفية */
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* الحاوية */
+.container {
+  background: #020617;
+  padding: 25px;
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* العنوان */
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* الحقول */
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* مربع إظهار/إخفاء كلمة المرور */
+.show-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* شريط القوة */
+.strength-bar {
+  background: #334155;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#strength {
+  height: 12px;
+  width: 0%;
+  transition: width 0.5s ease, background 0.5s ease;
+  border-radius: 6px;
+  background: linear-gradient(to right, red, orange, yellow, green);
+}
+
+/* رسالة القوة */
+#message {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* قائمة النصائح */
+ul {
+  margin-top: 15px;
+  padding: 0;
+  font-size: 14px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Tooltip عند المرور على النصيحة */
+li:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1e293b;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  z-index: 10;
+}
